@@ -1,4 +1,4 @@
-## Exercise 4 (Arrays and Objects)
+## Solutions Exercise 4
 ### For these last few challenges, I'll create three penguins for you to work with:
 ```
 var gunter = {
@@ -31,37 +31,94 @@ var fred = {
 ---
 #### 1. Create a new variable named penguins and set it equal to an array that lists these three penguins! (Hint: remember you can put variable names inside an array, not just hard-coded values! And remember that variable names don't have quotes around them.)
 
+Solution
+```
+var penguins = [gunter, ramon, fred];
+```
 ---
 #### 2. Access the first penguin in the list and print it to the console using console.log() -- notice that you can see all the properties and methods of that object listed in the console! (Hint: remember that array indexes start counting at 0, not 1!)
 
+Solution
+```
+console.log(penguins[0]);
+```
 ---
 #### 3. Create a new variable called secondPenguin and set it equal to the second penguin in your penguins array.
 
+Solution
+```
+var secondPenguin = penguins[1];
+```
 ---
 #### 4. Print to the console the name of the last penguin in the list.
 
+Solution
+```
+console.log(penguins[2]);
+```
 ---
 #### 5. Remember the penguin you created earlier, with the variable name of myPenguin? Add that penguin to the end of the penguins array!
 
+Solution
+```
+penguins.push(myPenguin);
+```
 ---
 #### 6. Print the length of the penguins array to the console.
-
+Solution
+```
+console.log(penguins.length);
+```
 ---
 #### 7. Write one more line of code to change the first penguin's canFly property to the value true (overriding its existing value).
 
+Solution
+```
+penguins[0].canFly = true;
+```
 ---
 #### 8. Call the sayHello method of the first penguin in your penguins array!
 
+Solution
+```
+penguins[0].sayHello();
+```
 ---
 #### 9. Write a for loop to iterate through every penguin in the array and print the value of each penguin's name property to the console.
 
+Solution
+```
+for (var index = 0; index < penguins.length; index++) {
+  console.log(penguins[index].name);
+}
+```
 ---
 #### 10. Write a for loop to call the sayHello method of every penguin in the array!
 
+Solution
+```
+for (var index = 0; index < penguins.length; index++) {
+  penguins[index].sayHello();
+}
+```
 ---
 #### 11. Write a for loop to iterate through every penguin in the array, and add a new property to each penguin called numberOfFeet with the value 2
 
+Solution
+```
+for (var index = 0; index < penguins.length; index++) {
+  penguins[index].numberOfFeet = 2;
+}
+```
 ---
 #### 12. Write another for loop to iterate through every penguin in the array, and for each penguin that can fly, print to the console a message containing the penguin's name and " can fly!" -- for example, "Gunter can fly!" or "Ramón can fly!" (Don't do anything for the penguins that cannot fly.)
 
+Solution
+```
+for (var index = 0; index < penguins.length; index++) {
+  if (penguins[index].canFly) {
+    console.log(penguins[index].name + " can fly!");
+  }
+}
+```
 
